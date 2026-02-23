@@ -1,0 +1,2 @@
+# astrbot_plugin_llm_Output_audit
+一键阻止大模型被诱导输出违规消息
