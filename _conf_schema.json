@@ -71,14 +71,23 @@
         "default": [],
         "hint": "格式为「词汇~原因」，用~分隔词汇和合规原因，例如「我去~表达惊讶」，这些内容会被加入白名单并告知大模型为合规内容"
     },
-    "ignore_sessions": {
-        "description": "忽略检测的会话列表",
+    "ignore_qq_list": {
+        "description": "忽略检测的用户QQ号列表",
         "type": "list",
         "items": {
             "type": "string"
         },
         "default": [],
-        "hint": "填写会话的 unified_msg_origin，可通过 /sid 命令获取，列表内的会话将跳过所有检测"
+        "hint": "填写用户QQ号，列表内的用户发送的所有消息（私聊/群聊）都不会被检测，直接放行"
+    },
+    "ignore_group_list": {
+        "description": "忽略检测的群号列表",
+        "type": "list",
+        "items": {
+            "type": "string"
+        },
+        "default": [],
+        "hint": "填写QQ群号，列表内的群聊中所有消息都不会被检测，直接放行"
     },
     "blocked_message": {
         "description": "拦截后的自定义回复内容",
