@@ -7,13 +7,13 @@ from typing import Tuple, Optional
 
 
 @register(
-    "astrbot_plugin_llm_Output_audit",
+    "llm_output_audit",
     "Wyccotccy",
-    "LLM输入输出内容合规检测插件，支持正则违禁词、大模型审核、黑白名单、自定义合规表达、动态指令添加",
+    "一键阻止大模型被诱导输出违规消息",
     "1.1.0",
     "https://github.com/Wyccotccy/astrbot_plugin_llm_Output_audit"
 )
-class ContentSafetyPlugin(Star):
+class LLMAuditPlugin(Star):
     def __init__(self, context: Context, config: AstrBotConfig):
         super().__init__(context)
         self.context = context
@@ -50,7 +50,7 @@ class ContentSafetyPlugin(Star):
         # 违禁词正则
         self.banned_patterns = self._compile_patterns(self.config.get("banned_regex", []))
         
-        logger.info("内容合规检测插件 v1.1.0 加载完成")
+        logger.info("LLM内容合规审计插件 v1.1.0 加载完成")
 
     def _compile_patterns(self, pattern_list: list) -> list:
         """预编译正则表达式，自动捕获并跳过语法错误的规则"""
@@ -246,4 +246,4 @@ class ContentSafetyPlugin(Star):
 
     async def terminate(self):
         """插件卸载/重载时的资源清理"""
-        logger.info("内容合规检测插件已卸载，资源已清理")
+        logger.info("LLM内容合规审计插件已卸载，资源已清理")
