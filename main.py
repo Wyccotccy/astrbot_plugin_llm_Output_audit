@@ -7,11 +7,11 @@ from typing import Tuple, Optional
 
 
 @register(
-    "content_safety_check",
-    "AstrBotCommunity",
+    "astrbot_plugin_llm_Output_audit",
+    "Wyccotccy",
     "LLM输入输出内容合规检测插件，支持正则违禁词、大模型审核、黑白名单、自定义合规表达、动态指令添加",
     "1.1.0",
-    "https://github.com/Soulter/astrbot_plugin_content_safety"
+    "https://github.com/Wyccotccy/astrbot_plugin_llm_Output_audit"
 )
 class ContentSafetyPlugin(Star):
     def __init__(self, context: Context, config: AstrBotConfig):
