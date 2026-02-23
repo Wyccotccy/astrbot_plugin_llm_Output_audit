@@ -7,7 +7,7 @@ from typing import Tuple, Optional
 
 
 @register(
-    "llm_output_audit",
+    "astrbot_plugin_llm_Output_audit",
     "Wyccotccy",
     "一键阻止大模型被诱导输出违规消息",
     "1.1.0",
