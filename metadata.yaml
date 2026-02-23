@@ -1,0 +1,7 @@
+name: "astrbot_plugin_llm_Output_audit"
+author: "Wyccotccy"
+desc: "LLM输入输出内容合规检测插件，支持正则违禁词、大模型审核、黑白名单、自定义合规表达、管理员动态添加"
+version: "1.1.0"
+repo: "https://github.com/Wyccotccy/astrbot_plugin_llm_Output_audit"
+display_name: "内容合规检测"
+logo_path: ""
